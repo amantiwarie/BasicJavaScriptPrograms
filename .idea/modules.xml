@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/front/dompractisefinal/dompractisefinal.iml" filepath="$PROJECT_DIR$/front/dompractisefinal/dompractisefinal.iml" />
       <module fileurl="file://$PROJECT_DIR$/front/front.iml" filepath="$PROJECT_DIR$/front/front.iml" />
       <module fileurl="file://$PROJECT_DIR$/js.iml" filepath="$PROJECT_DIR$/js.iml" />
     </modules>

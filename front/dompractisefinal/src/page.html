@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile Manager</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; }
+        input, select { padding: 8px; margin: 4px; width: 200px; }
+        button { padding: 8px 14px; cursor: pointer; margin: 4px; }
+        #cards { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+        .card {
+          background: #f0f4ff; border: 1px solid #ccc;
+          border-radius: 8px; padding: 14px; width: 180px;
+          position: relative;
+        }
+        .card.enrolled { border-left: 4px solid green; }
+        .card.pending  { border-left: 4px solid orange; }
+        .card h3 { margin: 0 0 6px; }
+        .del-btn { background: red; color: white; border: none;
+                   padding: 3px 8px; position: absolute; top: 10px; right: 10px; }
+        #counter { font-weight: bold; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<h2>🎓 Student Profile Manager</h2>
+
+<input type="text"   id="nameInput"   placeholder="Student Name" />
+<input type="text"   id="courseInput" placeholder="Course" />
+<select id="statusInput">
+    <option value="pending">Pending</option>
+    <option value="enrolled">Enrolled</option>
+</select>
+<button id="addBtn">Add Student</button>
+<button id="fetchBtn">Fetch Random User (AJAX)</button>
+
+<p id="counter">Total Students: 0</p>
+<div id="cards"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

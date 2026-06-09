@@ -1,5 +1,10 @@
 
         $(document).ready(function () {
+        $("#taskInput").keypress(function(event) {
+            if (event.which === 13) {
+                $("#addBtn").click();
+            }
+        });
 
             // Add Task
             $("#addBtn").click(function () {
@@ -21,6 +26,7 @@
                 $("#taskList").append(newTask);
 
                 $("#taskInput").val("");
+                updateTaskCount();
             });
 
             // Mark Complete
@@ -31,6 +37,12 @@
             // Delete Task
             $("#taskList").on("click", ".delete-btn", function () {
                 $(this).parent().remove();
+                updateTaskCount();
             });
+
+            function updateTaskCount() {
+                $("#taskCount").text($("#taskList li").length);
+            }
+
 
         });
