@@ -8,7 +8,6 @@ document.getElementById("nameInput").addEventListener("keydown", function(e) {
 });
 
 function addStudent() {
-
   const name   = document.getElementById("nameInput").value.trim();
   const course = document.getElementById("courseInput").value.trim();
   const status = document.getElementById("statusInput").value;
